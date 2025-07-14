@@ -19,7 +19,7 @@ const Header = () => {
         Pariatur, et totam?
       </p>
 
-      <button className="sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full">
+      <button className="sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full cursor-pointer">
         Generate Images
         <img className="h-6" src={assets.star_group} alt="" />
       </button>
