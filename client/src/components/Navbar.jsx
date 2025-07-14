@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to = '/'>
          <img src = {assets.logo} alt = "" className='w -28 sm:w-32 lg:w-40'/>
         </Link>
-
+        
         <div>
             {user ? 
               <div className='flex items-center gap-2 sm:gap-3'>
