@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
+import { motion } from "motion/react";
+
 
 const Result = () => {
   const [image, setImage] = useState(assets.sample_img_1);
@@ -11,7 +13,15 @@ const Result = () => {
   }
 
   return (
-    <from onSubmit={onsubmitHandler} className="flex flex-col min-h-[90vh] justify-center items-center">
+    <motion.from
+      initial={{ opacity: 0.2, y: 100 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+
+      onSubmit={onsubmitHandler}
+      className="flex flex-col min-h-[90vh] justify-center items-center"
+    >
       <div>
         <div className="relative">
           <img src={image} className="max-w-sm rounded" alt="" />
@@ -27,7 +37,8 @@ const Result = () => {
       {!isImageLoaded && (
         <div className="flex w-full max-w-xl bg-neutral-500 text-white text-sm p-0.5 mt-10 rounded-full">
           <input
-            onChange={(e) => setInput(e.target.value)} value={input}
+            onChange={(e) => setInput(e.target.value)}
+            value={input}
             type="text"
             placeholder="Describe what you want to generate"
             className="flex-1 bg-transparent outline-none ml-8 max-sm:w-20 placeholder-color"
@@ -60,7 +71,7 @@ const Result = () => {
           </a>
         </div>
       )}
-    </from>
+    </motion.from>
   );
 };
 
