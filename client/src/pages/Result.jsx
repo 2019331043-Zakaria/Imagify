@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { motion } from "motion/react";
+import { useContext } from "react";
+import { AppContext } from "../context/Appcontext";
 
 
 const Result = () => {
@@ -8,12 +10,25 @@ const Result = () => {
   const [isImageLoaded, setisImageLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [input, setInput] = useState('');
-  const onsubmitHandler = async(e) => {
+  const {generateImage} = useContext(AppContext);
 
+  const onsubmitHandler = async(e) => {
+    
+      e.preventDefault();
+      setLoading(true);
+      if(input) {
+        const image = await generateImage(input);
+        if(image) {
+          setisImageLoaded(true);
+          setImage(image);
+        }
+      }
+
+      setLoading(false);
   }
 
   return (
-    <motion.from
+    <motion.form
       initial={{ opacity: 0.2, y: 100 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +86,7 @@ const Result = () => {
           </a>
         </div>
       )}
-    </motion.from>
+    </motion.form>
   );
 };
 
