@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import {assets} from '../assets/assets'
 import { Link, Links, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
-import { AppContext } from '../context/Appcontext';
+import { AppContext } from '../context/AppContext';
 const Navbar = () => {
 
 

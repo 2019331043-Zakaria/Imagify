@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { assets, plans } from '../assets/assets';
-import { AppContext } from '../context/Appcontext';
+import { AppContext } from '../context/AppContext';
 import { motion } from "motion/react";
 const BuyCredit = () => {
 
