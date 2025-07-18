@@ -18,9 +18,9 @@ PixelAI is an AI-powered **text-to-image generation** web application built with
 - **AI Service**: ClipDrop API (by Stability.ai)
 
 ## 📸 Demo
+vercel link : https://pixelai-liard.vercel.app/ <br>
 
-> _Coming soon_  
-(Screenshot or live demo link if deployed)
+https://github.com/user-attachments/assets/34209f43-b7ee-4e68-8019-bd8f60096f12
 
 ## 📥 Installation & Setup
 
